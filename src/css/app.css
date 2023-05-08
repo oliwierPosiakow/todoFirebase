@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+  align-items: center;
+}
+.main__img {
+  min-width: 150px;
+  width: 100%;
+  max-width: 300px;
+}
+.main__p {
+  margin: 0;
+}
+.main .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main .form__input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px #bebebe;
+  text-align: center;
+  background: #f1f1f1;
+}
+.main .form__button {
+  width: 100%;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #ffc849;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.main .form__button:hover {
+  background: #ffb32c;
+  color: #f5f5f5;
+}
+.main ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+/*# sourceMappingURL=app.css.map */

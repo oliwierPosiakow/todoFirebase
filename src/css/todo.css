@@ -1,0 +1,33 @@
+.listItem {
+  margin-bottom: 1em;
+}
+.listItem .row {
+  width: 100%;
+  padding: 0.5em 1em;
+  background: #f5f5f5;
+  border: 1px solid #303030;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+.listItem .row label {
+  margin: 0;
+  margin-left: 0.5em;
+}
+.listItem .row input[type=checkbox] {
+  accent-color: #ffc849;
+}
+.listItem .row__button {
+  margin-left: auto;
+  margin-right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75em;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=todo.css.map */

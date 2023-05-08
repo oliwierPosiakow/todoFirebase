@@ -1,0 +1,48 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+  align-items: center;
+  &__img{
+    min-width: 150px;
+    width: 100%;
+    max-width: 300px;
+  }
+  &__p{
+    margin: 0;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &__input{
+      width: 100%;
+      padding: 1em;
+      margin-bottom: 1em;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0px 0px 4px #bebebe;
+      text-align: center;
+      background: #f1f1f1;
+    }
+    &__button{
+      width: 100%;
+      padding: 1em 2em;
+      cursor: pointer;
+      background: #ffc849;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      &:hover{
+        background: #ffb32c;
+        color: #f5f5f5;
+      }
+    }
+  }
+  ul{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+  }
+
+}
