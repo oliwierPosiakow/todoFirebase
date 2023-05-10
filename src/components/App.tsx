@@ -2,12 +2,12 @@ import '../css/app.css'
 import shoppingImg from '../assets/shopping.png'
 import {Todo} from "../Todo";
 import {useState, useEffect} from "react";
+// @ts-ignore
 import {UserAuth} from '../context/AuthContext.jsx'
 import {useNavigate} from "react-router-dom";
 // @ts-ignore
 import {db} from '../firebase.js'
 import {query, collection, onSnapshot, updateDoc, deleteDoc, addDoc, doc} from 'firebase/firestore'
-import {Navigate} from "react-router-dom";
 function App() {
     const [todos, setTodos] = useState([])
     const [input, setInput] = useState('')

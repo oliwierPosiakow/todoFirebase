@@ -3,6 +3,7 @@ import SignUp from "./SignUp"
 import App from "./App";
 import {Routes, Route} from "react-router-dom";
 import '../css/welcome.css'
+// @ts-ignore
 import {AuthContextProvider} from '../context/AuthContext'
 import ProtectedRoute from "./ProtectedRoute";
 export function Welcome() {

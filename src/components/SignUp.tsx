@@ -1,23 +1,23 @@
 import {Link, useNavigate} from "react-router-dom";
 import '../css/signup.css'
 import {useState} from "react";
+// @ts-ignore
 import {UserAuth} from "../context/AuthContext"
 function SignUp() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
     const navigate = useNavigate()
     const {createUser} = UserAuth()
     // @ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setError('')
         try{
             await createUser(email, password)
             navigate('/app')
         }
         catch (e){
-            setError(e.message)
+            // @ts-ignore
+            console.log(e.message)
         }
     }
 

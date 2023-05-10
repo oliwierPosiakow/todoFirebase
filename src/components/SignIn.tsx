@@ -1,14 +1,15 @@
 import {Link, useNavigate} from "react-router-dom";
+// @ts-ignore
 import {UserAuth} from "../context/AuthContext";
 import '../css/signup.css'
 import {useState} from "react";
 const SignIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
     const {signIn} = UserAuth()
     const navigate = useNavigate()
 
+    // @ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
@@ -16,7 +17,8 @@ const SignIn = () => {
             navigate('/app')
         }
         catch (e){
-            setError(e)
+            // @ts-ignore
+            console.log(e.message)
         }
     }
 
