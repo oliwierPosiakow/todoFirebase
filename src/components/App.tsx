@@ -1,9 +1,9 @@
-import './css/app.css'
-import shoppingImg from './assets/shopping.png'
-import {Todo} from "./Todo";
+import '../css/app.css'
+import shoppingImg from '../assets/shopping.png'
+import {Todo} from "../Todo";
 import {useState, useEffect} from "react";
 // @ts-ignore
-import {db} from './firebase.js'
+import {db} from '../firebase.js'
 import {query, collection, onSnapshot, updateDoc, deleteDoc, addDoc, doc} from 'firebase/firestore'
 function App() {
     const [todos, setTodos] = useState([])
