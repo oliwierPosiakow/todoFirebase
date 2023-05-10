@@ -16,7 +16,8 @@ function App() {
 
     // @ts-ignore
     useEffect(() => {
-        const q = query(collection(db, 'todos'))
+        const userEmail: string = user.email
+        const q = query(collection(db, userEmail))
         const unsubscribe = onSnapshot(q,(querySnapshot) => {
             // @ts-ignore
             const todosArr = []
@@ -29,7 +30,8 @@ function App() {
         return () => unsubscribe
     },[])
     const toggleComplete = async (todo: {id: string,  completed: boolean}) => {
-        await updateDoc(doc(db, 'todos', todo.id), {
+        const userEmail: string = user.email
+        await updateDoc(doc(db, userEmail, todo.id), {
             completed: !todo.completed
         })
     }
@@ -37,7 +39,8 @@ function App() {
     const createTodo = async (e: any) => {
         e.preventDefault(e)
         if(input.trim() != ''){
-            await addDoc(collection(db,'todos'), {
+            const userEmail = user.email
+            await addDoc(collection(db,userEmail), {
                 text: input,
                 completed: false,
             })
@@ -46,7 +49,8 @@ function App() {
     }
 
     const deleteTodo = async (id: string) => {
-        await deleteDoc(doc(db, 'todos', id))
+        const userEmail: string = user.email
+        await deleteDoc(doc(db, userEmail, id))
     }
 
     const handleLogout = async () => {
