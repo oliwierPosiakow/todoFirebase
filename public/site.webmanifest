@@ -1,6 +1,6 @@
 {
-    "name":"",
-    "short_name":"",
+    "name":"Todo App",
+    "short_name":"Todo App",
     "icons":[
         {
             "src":"/android-chrome-192x192.png",
@@ -11,7 +11,7 @@
             "src":"/android-chrome-512x512.png",
             "sizes":"512x512","type":"image/png"}
     ],
-    "theme_color":"#ffc849",
-    "background_color":"#ffffff",
+    "theme_color":"#FFC849",
+    "background_color":"#FFC849",
     "display":"standalone"
 }
