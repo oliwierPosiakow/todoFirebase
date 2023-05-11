@@ -1,4 +1,5 @@
 import {Link, useNavigate} from "react-router-dom";
+import loginImg from '../assets/login.png'
 // @ts-ignore
 import {UserAuth} from "../context/AuthContext";
 import '../css/signup.css'
@@ -6,6 +7,7 @@ import {useState} from "react";
 const SignIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
     const {signIn} = UserAuth()
     const navigate = useNavigate()
 
@@ -18,14 +20,15 @@ const SignIn = () => {
         }
         catch (e){
             // @ts-ignore
-            console.log(e.message)
+            setError(e.message.slice(10))
         }
     }
 
     return (
         <div className="wrapper">
+            <h1 className='wrapper__h1'>Sign In</h1>
+            <img src={loginImg} alt="Login img, laptop keylock"/>
             <form className='wrapper-form' onSubmit={handleSubmit}>
-                <h1 className='wrapper-form__h1'>Sign In</h1>
                 <label htmlFor="signin-email">Email</label>
                 <input
                     id='signin-email'
@@ -42,6 +45,7 @@ const SignIn = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                {error != '' ? <p className='wrapper-form__error'>{error}</p> : ''}
                 <button className='wrapper-form__button'>Sign In</button>
             </form>
             <p className='wrapper__p'>Don't have an account yet? <Link to='/signup'>Sign Up</Link></p>

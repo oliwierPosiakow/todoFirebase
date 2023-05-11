@@ -4,18 +4,28 @@
 .listItem .row {
   width: 100%;
   padding: 0.5em 1em;
-  background: #f5f5f5;
-  border: 1px solid #303030;
   border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px #b7b6b6;
+}
+.listItem .row .right {
+  display: flex;
+  align-items: center;
+}
+.listItem .row .right .class {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+.listItem .row input[type=checkbox] {
+  accent-color: #ffc849;
 }
 .listItem .row label {
   margin: 0;
   margin-left: 0.5em;
-}
-.listItem .row input[type=checkbox] {
-  accent-color: #ffc849;
+  cursor: pointer;
 }
 .listItem .row__button {
   margin-left: auto;
@@ -24,10 +34,34 @@
   border: none;
   cursor: pointer;
   padding: 0.75em;
+  color: #303030;
+}
+.listItem .row__button svg {
+  font-size: 1.2rem;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+.hobby {
+  background-color: #ffc849;
+}
+
+.school {
+  background-color: #899dd2;
+}
+
+.work {
+  background-color: #ff6262;
+}
+
+.home {
+  background-color: #fb6e3a;
+}
+
+.other {
+  background-color: #cccccc;
 }
 
 /*# sourceMappingURL=todo.css.map */

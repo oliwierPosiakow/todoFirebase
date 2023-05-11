@@ -1,11 +1,13 @@
 import {Link, useNavigate} from "react-router-dom";
 import '../css/signup.css'
 import {useState} from "react";
+import signUp from '../assets/signup.jpg'
 // @ts-ignore
 import {UserAuth} from "../context/AuthContext"
 function SignUp() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
     const navigate = useNavigate()
     const {createUser} = UserAuth()
     // @ts-ignore
@@ -17,14 +19,15 @@ function SignUp() {
         }
         catch (e){
             // @ts-ignore
-            console.log(e.message)
+            setError(e.message.slice(10))
         }
     }
 
     return(
         <div className="wrapper">
+            <h1 className='wrapper__h1'>Create an account</h1>
+            <img src={signUp} alt="Signup image, people, account"/>
             <form className='wrapper-form' onSubmit={handleSubmit}>
-                <h1 className='wrapper-form__h1'>Sign Up</h1>
                 <label htmlFor="signup-email">Email</label>
                 <input
                     id='signup-email'
@@ -42,9 +45,10 @@ function SignUp() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                {error != '' ? <p className='wrapper-form__error'>{error}</p> : ''}
                 <button className='wrapper-form__button'>Sign Up</button>
             </form>
-            <p className='wrapper__p'>Already have an account? <Link to='/'>Sign In</Link></p>
+            <p className='wrapper__p'>Already have an account? <Link className='p__link' to='/'>Sign In</Link></p>
         </div>
     )
 }

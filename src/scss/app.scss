@@ -1,12 +1,46 @@
+.user_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 1em;
+  position: relative;
+  font-size: 1.1rem;
+  &__logout{
+    border: none;
+    background-color: #ffc849;
+    padding: .5em 1em;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: .9rem;
+    box-shadow: 0px 0px 10px rgba(38, 38, 38, 0.15);
+    cursor: pointer;
+    position: absolute;
+    top: -42px;
+    right: 10px;
+    color: #303030;
+    transition: all 2ms ease-in;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+  span{
+    color: #ffb32c;
+    font-weight: 700;
+  }
+}
 .main{
   display: flex;
   flex-direction: column;
-  padding: 1em 2em;
+  padding: .5em 1em;
   align-items: center;
   &__img{
     min-width: 150px;
     width: 100%;
     max-width: 300px;
+  }
+  &__hello{
+    margin: 0;
   }
   &__p{
     margin: 0;
@@ -15,6 +49,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    .input-wrapper{
+      display: flex;
+      gap: .5em;
+      #todo-category{
+        width: 35%;
+      }
+    }
     &__input{
       width: 100%;
       padding: 1em;
@@ -24,6 +65,7 @@
       box-shadow: 0px 0px 4px #bebebe;
       text-align: center;
       background: #f1f1f1;
+      font-size: 1rem;
     }
     &__button{
       width: 100%;
@@ -33,6 +75,7 @@
       border: none;
       border-radius: 12px;
       font-weight: 700;
+      font-size: 1rem;
       &:hover{
         background: #ffb32c;
         color: #f5f5f5;
@@ -45,4 +88,17 @@
     padding: 0;
   }
 
+}
+
+.hobby{
+  background-color: #ffc849;
+}
+.school{
+  background-color: #899dd2;
+}
+.work{
+  background-color: #ff6262;
+}
+.home{
+  background-color: #fb6e3a;
 }
