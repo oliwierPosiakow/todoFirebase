@@ -5,4 +5,4 @@ I have added Firebase Authentication to enable multiple users sign up and use th
 The app is created in React using React Router, Typescript and Hooks.
 Feel free to jump in and create Your todo list and let me know what do You think :)
 
-IMPORTANT: App is designed to work well on smartphones and small displays and it's it deired media screens.
+IMPORTANT: App is designed to work well on smartphones and small displays.
