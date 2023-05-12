@@ -1,2 +1,8 @@
 # todoFirebase
- Todo app created to learn how to use Fireabse with React in a simple project.
+Hello, 
+This is a Todo App which is using Firebase as a db to store data about lists.
+I have added Firebase Authentication to enable multiple users sign up and use this database simultaneously.
+The app is created in React using React Router, Typescript and Hooks.
+Feel free to jump in and create Your todo list and let me know what do You think :)
+
+IMPORTANT: App is designed to work well on smartphones and small displays and it's it deired media screens.
